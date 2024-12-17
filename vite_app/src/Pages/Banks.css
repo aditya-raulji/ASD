@@ -1,0 +1,133 @@
+/* Main container for the Banks section */
+.banks-container {
+    text-align: center;
+    margin: 2rem;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff6347, #ff1493, #8a2be2); /* Gradient background */
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banks-container:hover {
+    transform: scale(1.02); /* Slight scale on hover */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Title with gradient animation */
+.banks-title {
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #ff007f, #ff8c00, #00bfff); /* Gradient effect */
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+    animation: gradientAnimation 3s ease-in-out infinite;
+}
+
+/* Gradient animation for title */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(90deg, #ff007f, #ff8c00, #00bfff);
+    }
+    50% {
+        background: linear-gradient(90deg, #ff1493, #00bfff, #ff6347);
+    }
+    100% {
+        background: linear-gradient(90deg, #ff007f, #ff8c00, #00bfff);
+    }
+}
+
+/* Search container */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 0.6rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.search-bar:focus {
+    border-color: #5d3fd3;
+    box-shadow: 0 4px 8px rgba(93, 63, 211, 0.2);
+    background-color: #f0f8ff; /* Light blue background when focused */
+}
+
+/* Search button with hover animation */
+.search-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    background-color: #5d3fd3;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #4b2caf;
+    transform: scale(1.05); /* Slight grow effect */
+}
+
+/* Bank details section */
+.bank-details {
+    margin-top: 2rem;
+    text-align: left;
+    background-color: #f8f9fa;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-out; /* Animation for fade in effect */
+}
+
+/* Fade in effect for bank details */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bank-details p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    color: #333;
+}
+
+.bank-details h2 {
+    font-size: 1.8rem;
+    color: #5d3fd3;
+    margin-bottom: 1rem;
+    animation: colorChange 2s ease-in-out infinite;
+}
+
+/* Animation for color change in h2 */
+@keyframes colorChange {
+    0% {
+        color: #5d3fd3; /* Original color */
+    }
+    50% {
+        color: #ff6347; /* Change to red */
+    }
+    100% {
+        color: #5d3fd3; /* Original color */
+    }
+}
+
+

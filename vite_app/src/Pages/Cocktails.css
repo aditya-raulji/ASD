@@ -1,0 +1,203 @@
+.cocktails-container{
+    text-align: center;
+    margin: 2rem auto;
+    font-family: "Arial", sans-serif;
+    max-width: 1200px;
+}
+
+
+.title {
+    color: #ffffff;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #ff007f, #ff8c00, #00bfff); /* Gradient text */
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Text shadow for depth */
+}
+
+/* Search Bar Styles */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.search-bar {
+    padding: 0.75rem;
+    width: 600px;
+    height: 50px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #ff8c00;
+    box-shadow: 0 0 10px rgba(255, 140, 0, 0.5); /* Focus effect */
+}
+
+/* Search Button Styles */
+.search-button {
+    margin-left: 1rem;
+    padding: 0.75rem 2rem;
+    background: linear-gradient(45deg, #ff007f, #ff7f00, #ff8c00); /* Gradient background */
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-button:hover {
+    background: linear-gradient(45deg, #ff7f00, #ff007f, #ff8c00); /* Reverse gradient on hover */
+    transform: translateY(-4px) scale(1.1); /* 3D effect with scale and elevation */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+}
+
+.search-button:active {
+    transform: translateY(0) scale(1); /* Reset on click */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Original shadow */
+}
+
+/* Loading Animation */
+.loading {
+    font-size: 1.5rem;
+    color: #ff007f;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Cocktail Grid Styles */
+.cocktail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Cocktail Card Styles */
+.cocktail-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: perspective(400px);
+}
+
+.cocktail-card:hover {
+    transform: scale(1.05) translateY(-10px); /* 3D scaling effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Larger shadow for depth */
+    background: linear-gradient(135deg, #ff1493, #ff7f50); /* Gradient background on hover */
+}
+
+/* Cocktail Image Styles */
+.cocktail-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.cocktail-img:hover {
+    transform: scale(1.1); /* Slight zoom effect on image hover */
+}
+
+/* Cocktail Name Styles */
+.cocktail-name {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    color: #333;
+    text-transform: capitalize;
+    background: linear-gradient(90deg, #ff007f, #ff7f00); /* Gradient text */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* Cocktail ID and Category Styles */
+.cocktail-id,
+.cocktail-category {
+    font-size: 1rem;
+    color: #777;
+    margin: 0.3rem 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .cocktails-container {
+        padding: 1rem;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .cocktail-grid {
+        grid-template-columns: 1fr 1fr; /* Two columns for small screens */
+    }
+}
+
+
+
+  
+.search-container{
+    background: #fff;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s;
+
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+.search-container:hover > .search-input{
+    width: 400px;
+}
+
+.search-container .search-input{
+    background: transparent;
+    border: none;
+    outline:none;
+    width: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.8s;
+
+}
+
+.search-container .search-btn .fas{
+    color: #5cbdbb;
+}
+
+@keyframes hoverShake {
+  0% {transform: skew(0deg,0deg);}
+  25% {transform: skew(5deg, 5deg);}
+  75% {transform: skew(-5deg, -5deg);}
+  100% {transform: skew(0deg,0deg);}
+}
+
+.search-container:hover{
+  animation: hoverShake 0.15s linear 3;
+}
+
